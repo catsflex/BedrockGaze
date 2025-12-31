@@ -1,0 +1,30 @@
+name: BedrockGaze
+version: '${project.version}'
+main: me.catsflex.bedrockgaze.BedrockGaze
+api-version: '1.21'
+description: A challenge where everything you look at turns into bedrock!
+author: CatsFlex
+
+commands:
+  bg:
+    description: "Main command for BedrockGaze challenge."
+    usage: "/bg <on|off|reload>"
+    aliases: [bedrockgaze]
+
+permissions:
+  bedrockgaze.on:
+    description: "Allows enabling the challenge"
+    default: op
+  bedrockgaze.off:
+    description: "Allows disabling the challenge"
+    default: op
+  bedrockgaze.reload:
+    description: "Allows reloading the configuration"
+    default: op
+  bedrockgaze.*:
+    description: "Grants the permission for all BedrockGaze features"
+    default: op
+    children:
+      bedrockgaze.on: true
+      bedrockgaze.off: true
+      bedrockgaze.reload: true
