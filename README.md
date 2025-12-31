@@ -19,6 +19,6 @@ Neatly recreated from GeorgeNotFound's & Dream's famous video with **all the mec
 - **bedrockgaze.reload** - Allows the usage of /bg reload
 - **bedrockgaze.*** - Full access
 
-# Requirements
+## Requirements
 - **Java 21** or higher
 - **Minecraft 1.21.x** _(Should work with 1.13+)_
