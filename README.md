@@ -1,4 +1,8 @@
 # BedrockGaze
+![Minecraft Version](https://img.shields.io/badge/Minecraft-1.13+-blue) 
+![Loader](https://img.shields.io/badge/Loader-Spigot-yellow)
+![License](https://img.shields.io/badge/License-GPL--3.0-red)
+
 BedrockGaze is an **extremely punishing** challenge plugin for Minecraft. The rules are simple: **whatever you look at turns into Bedrock**. Perfect for challenge videos & streams! .;,;.
 
 Neatly recreated from GeorgeNotFound's & Dream's famous video with **all the mechanics included**.
