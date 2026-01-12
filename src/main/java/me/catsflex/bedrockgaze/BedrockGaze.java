@@ -1,6 +1,7 @@
 package me.catsflex.bedrockgaze;
 
 import me.catsflex.bedrockgaze.commands.BGCommand;
+import me.catsflex.bedrockgaze.config.PluginConfiguration;
 import me.catsflex.bedrockgaze.runnable.GazeTask;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -13,21 +14,21 @@ public final class BedrockGaze extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		
-		// 1. Load/update config
+		// Load config
 		getLogger().info("Loading config...");
 		saveDefaultConfig();
-		getConfig().options().copyDefaults(true);
-		saveConfig();
+		getConfig().options().parseComments(true);
+		PluginConfiguration.load(this);
 		getLogger().info("Config loaded!");
 		
-		// 2. Initializing tasks
+		// Initialize tasks
 		getLogger().info("Initializing tasks...");
 		_task = new GazeTask(this);
 		_task.runTaskTimer(this, 0L, 1L);
 		getServer().getPluginManager().registerEvents(_task, this);
 		getLogger().info("Tasks initialized!");
 		
-		// 3. Registering commands
+		// Register commands
 		getLogger().info("Registering commands...");
 		var bg = Objects.requireNonNull(getCommand("bg"), "Command 'bg' not found in plugin.yml!");
 		var bgCmd = new BGCommand(_task, this);
@@ -41,7 +42,7 @@ public final class BedrockGaze extends JavaPlugin {
 	@Override
 	public void onDisable() {
 		
-		// 1. Cancelling tasks
+		// Cancel tasks
 		getLogger().info("Cancelling tasks...");
 		if (_task != null) {
 			_task.cancel();

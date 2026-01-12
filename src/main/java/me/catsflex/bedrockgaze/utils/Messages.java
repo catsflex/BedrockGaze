@@ -14,25 +14,28 @@ public enum Messages {
 	ERR_NO_PERM("✘ You do not have permission to use this command!", ChatColor.RED),
 	ERR_INSUFFICIENT_ARGS("✘ Insufficient arguments!", ChatColor.RED),
 	ERR_UNRESOLVED_CMD("✘ Unresolved command!", ChatColor.RED),
-	ERR_ALREADY_ON("✘ The challenge has already been ON!", ChatColor.RED),
-	ERR_ALREADY_OFF("✘ The challenge has already been OFF!", ChatColor.RED),
+	
+	// Warnings
+	WARN_RELOAD("⚠ Couldn't fully parse the config, check the console for more info!", ChatColor.YELLOW),
+	WARN_ALREADY_ON("⚠ The challenge has already been ON!", ChatColor.YELLOW),
+	WARN_ALREADY_OFF("⚠ The challenge has already been OFF!", ChatColor.YELLOW),
 	
 	// Success
 	SUCCESS_RELOAD("✔ The config has been reloaded!", ChatColor.GREEN),
 	SUCCESS_CHALLENGE_ON("✔ The challenge is ON!", ChatColor.GREEN),
 	SUCCESS_CHALLENGE_OFF("✔ The challenge is OFF!", ChatColor.GREEN);
 	
-	private final String text;
-	private final ChatColor color;
+	private final String _text;
+	private final ChatColor _color;
 	
 	Messages(@NotNull String text, @NotNull ChatColor color) {
-		this.text = text;
-		this.color = color;
+		_text = text;
+		_color = color;
 	}
 	
 	@Override
 	public String toString() {
-		return color + text;
+		return _color + _text;
 	}
 	
 	public void informAll(@NotNull ChatMessageType playerMessageType) {

@@ -1,13 +1,30 @@
 # The block that will replace all other blocks looked at
-replace-with: "minecraft:bedrock"
+replacement-material: minecraft:bedrock
 
 # List of blocks that the plugin will NOT change when looked at
-ignored-blocks:
-  - "minecraft:obsidian"
-  - "minecraft:nether_portal"
-  - "minecraft:end_portal_frame"
-  - "minecraft:end_portal"
+ignored-materials:
+- minecraft:obsidian
+- minecraft:nether_portal
+- minecraft:end_portal_frame
+- minecraft:end_portal
 
 # Maximum distance (in blocks) at which a player can look to trigger the change
 # Lower this value if you experience performance issues
 max-distance: 64
+
+# How the plugin interacts with liquids like water and lava
+# Possible values:
+# - ALWAYS: Liquids are treated as solid blocks (looking at water turns it into bedrock)
+# - SOURCE_ONLY: Only liquid source blocks are affected
+# - NEVER: The gaze passes through liquids entirely
+fluid-collision-mode: ALWAYS
+
+# List of gamemodes that are not affected by the challenge
+# Possible values:
+# - ADVENTURE
+# - CREATIVE
+# - SPECTATOR
+# - SURVIVAL
+ignored-gamemodes:
+- CREATIVE
+- SPECTATOR

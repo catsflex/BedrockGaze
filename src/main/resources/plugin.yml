@@ -7,7 +7,7 @@ author: CatsFlex
 
 commands:
   bg:
-    description: "Main command for BedrockGaze challenge."
+    description: "Main command for BedrockGaze challenge"
     usage: "/bg <on|off|reload>"
     aliases: [bedrockgaze]
 

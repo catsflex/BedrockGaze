@@ -6,7 +6,7 @@
 
     <groupId>me.catsflex</groupId>
     <artifactId>bedrock-gaze</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
 
     <name>bedrock-gaze</name>
@@ -18,7 +18,7 @@
 
     <build>
         <defaultGoal>clean package</defaultGoal>
-        <finalName>BedrockGaze-v${project.version}</finalName>
+        <finalName>BedrockGaze (v${project.version})</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
