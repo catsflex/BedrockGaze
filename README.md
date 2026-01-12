@@ -6,7 +6,7 @@
 BedrockGaze is an **extremely punishing** challenge plugin for Minecraft. The rules are simple: **whatever you look at turns into Bedrock**. Perfect for challenge videos & streams! .;,;.
 
 Neatly recreated from GeorgeNotFound's & Dream's famous video with **all the mechanics included**.
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/I4fdyLUeVhI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Video](https://img.youtube.com/vi/I4fdyLUeVhI/maxresdefault.jpg)](https://www.youtube.com/watch?v=I4fdyLUeVhI)
 
 ## Features
 - **Fully configurable:** Try changing Bedrock with TNT, Lava or any other block imaginable!
